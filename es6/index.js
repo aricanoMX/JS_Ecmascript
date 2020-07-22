@@ -89,6 +89,7 @@ console.log(education2);
   var global = "Global Var";
 }
 
+// con let solo esta disponible en el scope
 {
   let globalet = "Global Let";
   console.log(globalet);
@@ -102,3 +103,91 @@ console.log(a);
 var a = "b";
 a = "a";
 console.log(a);
+
+// variables
+
+//ES5
+let name = "oscar";
+let age = 32;
+let country = "MX";
+
+obj = { name: name, age: age };
+console.log(obj);
+
+//ES6
+obj2 = { name, age };
+console.log(obj2);
+
+// Arrow Functions = funciones de tipo flecha
+
+const names = [
+  { name: "Oscar", age: 32 },
+  { name: "Yessica", age: 27 },
+];
+// para mostrarlos usamos el metodo map
+
+//ES5
+let listOfNames = names.map(function (item) {
+  console.log(item.name);
+});
+
+//ES6
+let listOfNames2 = names.map((item) => console.log(item.name));
+
+// const listOfName3 =(name, age,country)=>{
+//   ...
+// }
+
+// const listOfName4 = name =>{
+//   ...
+// }
+
+const square = (num) => num * num;
+
+const helloPromise = () => {
+  return new Promise((resolve, reject) => {
+    if (true) {
+      resolve("wiiiiii");
+    } else {
+      reject("Upss!! algo salio mal");
+    }
+  });
+};
+
+helloPromise()
+  .then((response) => console.log(response))
+  .catch((error) => console.log(error));
+
+// continuando con el aprendizaje de ecmascipt 6
+// constructor
+class calculator {
+  constructor() {
+    this.valueA = 0;
+    this.valueB = 0;
+  }
+  sum(valueA, valueB) {
+    this.valueA = valueA;
+    this.valueB = valueB;
+    return this.valueA + this.valueB;
+  }
+}
+const calc = new calculator();
+console.log(calc.sum(2, 2));
+
+import { hello } from "./module";
+hello();
+
+//generator
+function* helloWorld() {
+  if (true) {
+    yield "hello, ";
+  }
+  if (true) {
+    yield "World";
+  }
+}
+
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
