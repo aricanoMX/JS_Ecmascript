@@ -1,0 +1,19 @@
+{
+  "name": "ecmasript",
+  "version": "1.0.0",
+  "description": "Curso donde se vera lo basico de los cambios de ecamscript +6 y versiones en adelante",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecmascript",
+    "6",
+    "Promisese",
+    "funtions",
+    "prams",
+    "concatenation"
+  ],
+  "author": "",
+  "license": "MIT"
+}
